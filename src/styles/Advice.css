@@ -1,0 +1,13 @@
+h3{
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    margin: 30px;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    margin: 30px;
+}
+

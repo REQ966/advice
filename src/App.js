@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Advice from './components/Advice';
+import Kocka from "./images/icon-dice.svg"
 
 function App() {
+
+  const [data, setData] = useState([])
+
+  const advice = () => {
+    fetch("https://api.adviceslip.com/advice")
+    .then(res => res.json())
+    .then(data => setData(data.slip))
+    .catch(err => console.log(err))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="advice-container">
+        <div className='content'> 
+          <Advice id={data.id} comment={data.advice}/>
+          
+        </div>
+        <div className='gomb'>
+        <button onClick={advice} style={{backgroundImage: `url(${Kocka})`, width:28, height:28 ,backgroundRepeat:'no-repeat', borderRadius:10, cursor:'pointer', }}></button>
+   
+        </div>
+        </div>
   );
 }
 
