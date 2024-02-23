@@ -21,7 +21,7 @@ function App() {
           
         </div>
         <div className='gomb'>
-        <button onClick={advice} style={{backgroundImage: `url(${Kocka})`, width:28, height:28 ,backgroundRepeat:'no-repeat', borderRadius:10, cursor:'pointer', }}></button>
+        <button onClick={advice} style={{backgroundImage: `url(${Kocka})`, width:28, height:28 ,backgroundRepeat:'no-repeat', borderRadius:5, cursor:'pointer', }}></button>
    
         </div>
         </div>

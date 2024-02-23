@@ -11,3 +11,9 @@ h1{
     margin: 30px;
 }
 
+@media (max-width: 768px) {
+    img{
+      width: 300px
+      
+    }
+}
