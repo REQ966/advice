@@ -20,11 +20,11 @@ function App() {
           <Advice id={data.id} comment={data.advice}/>
           
         </div>
-        <div className='gomb'>
-        <button onClick={advice} style={{backgroundImage: `url(${Kocka})`, width:28, height:28 ,backgroundRepeat:'no-repeat', borderRadius:5, cursor:'pointer', }}></button>
+        
+        <button onClick={advice}><img src={Kocka} alt='kocka'/></button>
    
         </div>
-        </div>
+
   );
 }
 
