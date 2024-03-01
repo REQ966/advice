@@ -46,9 +46,9 @@ button{
 
 @media (max-width: 768px) {
     .content{
-      width: 400px;
+      width: 500px;
       box-sizing: border-box;
     }
 
-    
+   
 }
